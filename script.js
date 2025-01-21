@@ -1,4 +1,4 @@
-const API_KEY = '5c18231daac9c30c66e623788c43d5a6'; // Replace with your OpenWeather API key
+const API_KEY = 'YOUR_API_KEY'; // Replace with your OpenWeather API key
 const weatherIcon = document.getElementById('weather-icon');
 const tempDiv = document.getElementById('temp-div');
 const weatherInfo = document.getElementById('weather-info');
