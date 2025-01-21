@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather Buddy</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/weather-icons/2.0.10/css/weather-icons.min.css">
+</head>
+<body>
+    <div class="app-container">
+        <nav class="sidebar">
+            <div class="logo">
+                <i class="wi wi-day-sunny"></i>
+                <h1>Weather Buddy</h1>
+            </div>
+            <div class="search-container">
+                <input type="text" id="city" placeholder="Search location...">
+                <button onclick="getWeather()" class="search-btn">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M11 19C15.4183 19 19 15.4183 19 11C19 6.58172 15.4183 3 11 3C6.58172 3 3 6.58172 3 11C3 15.4183 6.58172 19 11 19Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        <path d="M21 21L16.65 16.65" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                </button>
+            </div>
+            <div class="current-weather">
+                <div class="weather-icon">
+                    <i id="weather-icon" class="wi"></i>
+                </div>
+                <div class="weather-info">
+                    <div id="temp-div" class="temperature"></div>
+                    <div id="weather-info" class="description"></div>
+                </div>
+                <div class="weather-details">
+                    <div class="detail">
+                        <i class="wi wi-humidity"></i>
+                        <span id="humidity">--</span>
+                    </div>
+                    <div class="detail">
+                        <i class="wi wi-strong-wind"></i>
+                        <span id="wind">--</span>
+                    </div>
+                </div>
+            </div>
+        </nav>
+
+        <main class="main-content">
+            <div class="header">
+                <h2>Hourly Forecast</h2>
+                <div class="date" id="current-date"></div>
+            </div>
+            
+            <div class="forecast-grid" id="hourly-forecast"></div>
+
+            <div class="additional-info">
+                <div class="info-card sunrise-sunset">
+                    <h3>Sunrise & Sunset</h3>
+                    <div class="sun-times">
+                        <div class="sun-item">
+                            <i class="wi wi-sunrise"></i>
+                            <span id="sunrise">--:--</span>
+                        </div>
+                        <div class="sun-item">
+                            <i class="wi wi-sunset"></i>
+                            <span id="sunset">--:--</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="info-card air-quality">
+                    <h3>Air Quality</h3>
+                    <div class="aqi-display">
+                        <div class="aqi-number" id="aqi">--</div>
+                        <div class="aqi-text" id="aqi-text">--</div>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html> 
